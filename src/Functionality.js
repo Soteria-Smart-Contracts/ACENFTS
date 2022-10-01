@@ -97,7 +97,7 @@ function LoadNFTs() {
         rank = GetRank(id);
         newcard.className = "NFTcard";
         newcard.id = index;
-        let img = '<img class="nftimage" src="src/images/collection/' + id + '.PNG"></img>"';
+        let img = '<img class="nftimage" src="src/images/collection/' + id + '.jpg"></img>"';
         let BlockscoutLink = 'https://blockscout.com/etc/mainnet/token/0x18265d64393Ca917995Abf34bf73d39952f2D85b/instance/' + ids[index] +  '/token-transfers';
         newcard.innerHTML = img + '<a class="nftID head">Gensis ID:</a>' + '<br>' + '<a class="nftID">' + id + '</a>' + '<br>' + '<a class="nftID scout" href="' + BlockscoutLink + '" target="_blank">View On Blockscout</a>';
         document.getElementById("WalletContainer").appendChild(newcard);
