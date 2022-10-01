@@ -123,6 +123,9 @@ h3{
     margin: 0 auto;
 }
 
+a{
+    color: white;
+}
 
 .smallbutton.mint{
     font-size: 20px;
