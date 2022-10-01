@@ -78,16 +78,6 @@ function SwitchPage(page) {
 
 }
 
-function GetRank(id){
-    let index = 0;
-    while(index < 10000){
-        if (rankingorder[index] == id){
-            return index + 1;
-        }
-        index++;
-    }
-}
-
 
 function LoadNFTs() {
     let index = 0;
