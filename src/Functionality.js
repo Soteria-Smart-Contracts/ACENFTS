@@ -46,7 +46,7 @@ function ShowCollection(){
             newcard = document.createElement("div");
             newcard.className = "NFTcard";
             newcard.id = indexid;
-            let img = '<img class="nftimage" src="src/images/collection/' + indexid + '.PNG"></img>"';
+            let img = '<img class="nftimage" src="src/images/collection/' + indexid + '.jpg"></img>"';
             let BlockscoutLink = 'https://blockscout.com/etc/mainnet/token/0x18265d64393Ca917995Abf34bf73d39952f2D85b/instance/' + indexid +  '/token-transfers';
             newcard.innerHTML = img + '<a class="nftID head">Gensis ID:</a>' + '<br>' + '<a class="nftID">' + indexid + '</a>' + '<br>' + '<a class="nftID scout" href="' + BlockscoutLink + '" target="_blank">View On Blockscout</a>';
             document.getElementById("CollectionContainer").appendChild(newcard);
