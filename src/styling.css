@@ -1,30 +1,30 @@
-body{
-    background-image: url("images/bg.jpg");
+body {
+    /* background-image: url("images/bg.JPG"); */
     display: block;
     height: fit-content;
     background-position: top;
     background-repeat: no-repeat;
-    background-color: #2b8261;
+    background-color: #07091b;
     background-size: contain;
     text-align: center;
     align-items: center;
     align-content: center;
 }
 
-h1{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     font-weight: bolder;
     font-size: 40px;
 }
 
-h4{
+h4 {
     font-family: Arial;
     font-size: large;
     color: white;
 }
 
-.txviewer{
+.txviewer {
     font-family: Arial;
     font-size: large;
     font-weight: bolder;
@@ -43,12 +43,12 @@ h4{
 }
 
 
-.display{
+.display {
     margin-top: 25vh;
     text-align: left;
 }
 
-.DisplayHeader{
+.DisplayHeader {
     font-family: Arial;
     font-size: 5vh;
     color: blue;
@@ -57,14 +57,14 @@ h4{
     padding-left: 10vw;
 }
 
-.DisplayHeader.return{
+.DisplayHeader.return {
     text-decoration: none;
     font-size: 3vh;
     cursor: pointer;
     color: white;
 }
 
-.nftID{
+.nftID {
     font-family: Arial;
     font-size: 2vh;
     color: white;
@@ -72,16 +72,16 @@ h4{
 
 }
 
-.nftID.head{
+.nftID.head {
     margin-top: 6vh;
 }
 
-.nftID.scout{
+.nftID.scout {
     font-size: 13px;
     font-size: 1.4vh;
 }
 
-h2{
+h2 {
     font-family: Arial;
     color: white;
     font-size: 25px;
@@ -89,7 +89,7 @@ h2{
     margin-bottom: 1vh;
 }
 
-h3{
+h3 {
     font-family: Arial;
     color: white;
     font-size: 30px;
@@ -98,8 +98,8 @@ h3{
     margin-top: 1.8vh;
 }
 
-.smallbutton{
-    background-color: black;
+.smallbutton {
+    background-color: #07091b;
     border: none;
     font-family: Arial;
     color: white;
@@ -110,12 +110,17 @@ h3{
     font-size: 16px;
     margin: 2vh 1vw;
     cursor: pointer;
-    border: black solid 2px;
     border-radius: 5px;
     margin-bottom: 1vh;
+    transform-style: preserve-3d;
 }
 
-.spingif{
+.smallbutton:hover {
+    box-shadow: 0 2px 20px 0 rgba(255, 255, 255, 0.55);
+    transform: translate3d(0px, -3px, 0.01px);
+}
+
+.spingif {
     padding-left: 1vw;
     width: 3vh;
     height: 3vh;
@@ -123,36 +128,32 @@ h3{
     margin: 0 auto;
 }
 
-a{
+a {
     color: white;
 }
 
-.smallbutton.mint{
+.smallbutton.mint {
     font-size: 20px;
     font-family: Arial;
     font-weight: bolder;
     background-color: white;
-    color: black;
+    color: #07091b;
     border: none;
     width: 8vw;
-    transition: all .2s  ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
-.smallbutton.mint:hover{
-    background-color: #00d600;
-}
-
-.smallbutton.wallet{
+.smallbutton.wallet {
     font-weight: bold;
-    color: black;
+    color: #07091b;
     background-color: white;
 }
 
-.smallbutton.wallet.center{
+.smallbutton.wallet.center {
     margin-left: 43vw;
 }
 
-.logo{
+.logo {
     width: 8vw;
     height: 16vh;
     padding-top: 1vh;
@@ -163,65 +164,71 @@ a{
     border-top-left-radius: 40px;
 }
 
-.conlink{
+.conlink {
     font-family: Arial;
     color: white;
     font-size: 14px;
     font-weight: bold;
 }
 
-.generaldiv{
+.generaldiv {
     display: inline-block;
-    width: 40vw;
+    width: 35vw;
     margin: 0 auto;
     height: max-content;
     text-align: center;
     padding: 2vh;
-    margin-top: 63vh;
+    margin-top: 30vh;
     position: relative;
     align-self: center;
-    background-color: #1c47d1;
-    border: solid 7px #000000;
-    padding-bottom: 2%;
+    opacity: 0.97;
+    border-radius: 30px;
+    border-width: 0px;
+    background-image: linear-gradient(45deg, #ac50ef, #7059fb 50%, #2ecff6);
 }
 
-.mintdiv{
+.mintdiv {
     height: 18vh;
     margin: 0 auto;
-    width: 70%;
+    width: 60%;
     text-align: center;
     padding: 2vh;
-    padding-top: 6vh;
     margin-top: 2vh;
     position: relative;
     align-self: center;
-    background-color: black;
+    background-color: #07091b;
     border-radius: 10px;
-    border: black 3px solid;
+    border: #07091b 3px solid;
     margin-bottom: 2vh;
 
 }
 
-.center{
+.mintdiv_text {
+    color: white;
+    font-size: 18px;
+}
+
+.center {
     display: inline-block;
     text-align: left;
 }
 
-.input{
+.input {
     font-size: larger;
     text-align: center;
     width: 12vw;
-    color: black;
     height: 4vh;
     border-radius: 30px;
-    border: solid 2px #d6ceab;
     background-color: #ccffff;
+    color: #000;
+    background-image: linear-gradient(45deg, rgb(172, 80, 239, 0.3), rgb(112, 89, 251, 0.3) 50%, rgb(46, 207, 246, 0.2));
     padding-left: 1vw;
     margin-bottom: 2vh;
+    margin-top: 1vh;
 }
 
 
-.gifs{
+.gifs {
     display: inline-block;
     vertical-align: top;
     margin-top: 17vh;
@@ -232,15 +239,15 @@ a{
     margin-right: 8vh;
     margin-left: 8vh;
     border: #3aeb1b solid 5px;
-    background-color: black;
+    background-color: #07091b;
 }
 
-.gif{
+.gif {
     height: 30vh;
     border-radius: 100px;
 }
 
-.NFTContainer{
+.NFTContainer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -251,7 +258,7 @@ a{
 
 }
 
-.nftimage{
+.nftimage {
     height: 25vh;
     width: 13vw;
     min-width: 175px;
@@ -261,7 +268,7 @@ a{
     margin-bottom: 1vh;
 }
 
-.NFTcard{
+.NFTcard {
     height: fit-content;
     min-width: 175px;
     width: 13vw;
@@ -274,28 +281,154 @@ a{
 
 }
 
-@media (pointer:none), (pointer:coarse) {
-    .logo{
-        display: none;
+.image.cover {
+    width: 100%;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
 
+.position-absolute {
+    position: absolute;
+}
+
+.image-wrapper {
+    opacity: 0.96;
+    display: flex;
+    overflow: hidden;
+    filter: blur(0.3px);
+    animation-duration: 4s;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(0px, 0px);
+    animation-name: backgroundImage;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.image-wrapper.hero-v1 {
+    top: 30%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    align-items: center;
+    mix-blend-mode: lighten;
+    justify-content: flex-start;
+}
+
+.position-absolute.hero-v1-fade {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#07091b), color-stop(16%, rgba(7, 9, 27, 0)), color-stop(70%, rgba(7, 9, 27, 0)), to(#07091b));
+    background-image: linear-gradient(180deg, #07091b, rgba(7, 9, 27, 0) 16%, rgba(7, 9, 27, 0) 70%, #07091b);
+}
+
+.main_logo {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.main_logo_name {
+    height: 60px;
+    display: flex;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    padding-left: 10px;
+    font-weight: 550;
+    position: relative;
+    align-items: center;
+}
+
+.main_logo_container {
+    top: 7%;
+    right: 0%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: lighten;
+}
+
+.main_logo_image {
+    width: 100px;
+    height: 100px;
+}
+
+.button_text {
+    background-image: linear-gradient(45deg, #ac50ef, #7059fb 50%, #2ecff6);
+    color: #6248ff;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes backgroundImage {
+    0% {
+        opacity: 0.99;
+        filter: blur(0.1px);
     }
 
-    body{
+    25% {
+        opacity: 0.96;
+        filter: blur(0.3px);
+    }
+
+    50% {
+        opacity: 0.93;
+        filter: blur(0.6px);
+    }
+
+    100% {
+        opacity: 0.90;
+        filter: blur(0.9px);
+    }
+
+    50% {
+        opacity: 0.93;
+        filter: blur(0.6px);
+    }
+
+    25% {
+        opacity: 0.96;
+        filter: blur(0.3px);
+    }
+
+    0% {
+        opacity: 0.99;
+        filter: blur(0.1px);
+    }
+}
+
+@media (pointer:none),
+(pointer:coarse) {
+    .logo {
+        display: none;
+    }
+
+    body {
         background-image: none;
     }
 
-    .display{
+    .display {
         text-align: center;
         align-items: center;
-        margin-top: 2vh;
+        margin-top: 20vh;
     }
 
-    .nftimage{
+    .nftimage {
         width: 60vw;
         height: 30vh;
     }
 
-    .DisplayHeader{
+    .DisplayHeader {
         font-family: Arial;
         font-size: 4vh;
         color: white;
@@ -304,12 +437,12 @@ a{
         padding-left: 0;
     }
 
-    .NFTcard{
+    .NFTcard {
         width: 60vw;
         height: 40vh;
     }
 
-    .NFTContainer{
+    .NFTContainer {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -317,27 +450,42 @@ a{
         margin-top: 5vh;
         margin-left: 13vw;
         margin-right: 0;
-    
     }
 
-    .generaldiv{
+    .generaldiv {
         width: 80vw;
         padding-bottom: 3vh;
-        margin-top: 2vh;
+        margin-top: 20vh;
     }
 
-    .input{
+    .input {
         width: 50vw;
     }
 
-    .smallbutton.mint{
+    .smallbutton.mint {
         width: 20vw;
     }
-    .mintdiv{
+
+    .mintdiv {
         padding-bottom: 5vh;
+        width: 70%;
+        height: 20vh;
     }
 
-    .gifs{
+    .gifs {
         display: none;
+    }
+
+    .main_logo_image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .main_logo_name h1 {
+        font-size: 24px;
+    }
+
+    .main_logo_container {
+        top: 5%
     }
 }

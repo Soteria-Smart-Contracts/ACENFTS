@@ -1,68 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styling.css">
     <link rel="icon" type="image/x-icon" href="src/images/favicon.ico">
-    <script 
-    src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"
-    integrity="sha512-5erpERW8MxcHDF7Xea9eBQPiRtxbse70pFcaHJuOhdEBQeAxGQjUwgJbuBDWve+xP/u5IoJbKjyJk50qCnMD7A=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"
+        integrity="sha512-5erpERW8MxcHDF7Xea9eBQPiRtxbse70pFcaHJuOhdEBQeAxGQjUwgJbuBDWve+xP/u5IoJbKjyJk50qCnMD7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
     <title>ACE Genesis NFT</title>
 </head>
-<body>
- <div id="minting" class="minting">
-        
-        <h1></h1>
 
-    <div class="center">
-        <div class="generaldiv">
-            <h1>ACE Genesis NFT Minting</h1>
-            <h2>Minted: <a id="supply">0</a>/1500 | Price: 1 ETC</h2>
-            <br>
-            <a onclick="SwitchPage('wallet')" class="smallbutton wallet">My AGN's</a>
-            <a onclick="setUpdown('up'),SwitchPage('collection')" class="smallbutton wallet">Full Collection</a>
+<body>
+    <div class="main_logo_container">
+        <div class="main_logo">
+            <img src="src/images/apecoin_classic_etc.jpg" class="main_logo_image" layout="fill" alt="ApeCoin Classic ETC" />
+        </div>
+        <div class="main_logo_name">
+            <h1>
+                ApeCoin Classic ETC
+            </h1>
+        </div>
+    </div>
+
+    <div class="image-wrapper hero-v1">
+        <img src="src/images/bg-p.webp" loading="eager" sizes="100vw" alt="" className="image cover"
+            srcSet="src/images/bg-p-500.webp 500w, src/images/bg-p-800.webp 800w, src/images/bg-p-1080.webp 1080w, src/images/bg-p-1600.webp 1600w, src/images/bg-p-2000.webp 2000w, src/images/bg-p-2600.webp 2600w, src/images/bg-p.webp 2880w" />
+    </div>
+
+    <div id="minting" class="minting">
+        <div class="center">
+            <div class="generaldiv">
+                <h1>ACE Genesis NFT Minting</h1>
+                <h2>Minted: <a id="supply">0</a>/1500 | Price: 1 ETC</h2>
+                <br>
+                <a onclick="SwitchPage('wallet')" class="smallbutton wallet">
+                    <span class="button_text">
+                        My AGN's
+                    </span>
+                </a>
+                <a onclick="setUpdown('up'),SwitchPage('collection')" class="smallbutton wallet">
+                    <span class="button_text">
+                        Full Collection
+                    </span>
+                </a>
                 <div class="mintdiv">
-                    <a>Maximum 20 NFTs per mint</a><br><br>
-                    <input id="amount" max="20" placeholder="Mint Count" pattern=" 0+\.[0-9]*[1-9][0-9]*$" onkeypress="return event.charCode >= 48 && event.charCode <= 57" min="0" step="1" class="input" type="number"></input>
+                    <span class="mintdiv_text" >Maximum 20 NFTs per mint</span><br><br>
+                    <input id="amount" max="20" placeholder="Enter Mint Count" pattern=" 0+\.[0-9]*[1-9][0-9]*$"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" min="0" step="1" class="input"
+                        type="number"></input>
                     <br>
                     <a onclick="mint()" class="smallbutton mint">Mint</a>
                 </div>
-                <a class="conlink" href="https://blockscout.com/etc/mainnet/address/0x7B77F4101121bD7Fbfb1FeD2CEC78d3dDc604e05/contracts#address-tabs" target="_blank">Contract On Blockscout</a>
+                <a class="conlink"
+                    href="https://blockscout.com/etc/mainnet/address/0x7B77F4101121bD7Fbfb1FeD2CEC78d3dDc604e05/contracts#address-tabs"
+                    target="_blank">Contract On Blockscout</a>
+            </div>
+            <a class="txviewer" id="txviewer">Awaiting Blockchain confirmation <br><img src="src/images/spin.gif"
+                    id="spin" class="spingif"></img></a>
         </div>
-        <a class="txviewer" id="txviewer">Awaiting Blockchain confirmation <br><img src="src/images/spin.gif" id="spin" class="spingif"></img></a>
     </div>
-    <br></br>
-    <br></br>
-    
- </div>
- <div id="wallet" class="display">
-   <a onclick="SwitchPage('mint')" class="DisplayHeader return">Return</a>
-   <br>
-   <a class="DisplayHeader">My AGN's</a>
-   <div class="NFTContainer" id="WalletContainer">
-    
-   </div>
- </div>
 
- <div id="collection" class="display">
-    <a onclick="SwitchPage('mint')" class="DisplayHeader return">Return</a>
-    <br>
-    <a class="DisplayHeader">Entire AGN Collection</a>
-    <br>
-    <br>
-    <div class="NFTContainer" id="CollectionContainer">
-     
+    <div id="wallet" class="display">
+        <a onclick="SwitchPage('mint')" class="DisplayHeader return">Return</a>
+        <br>
+        <a class="DisplayHeader">My AGN's</a>
+        <div class="NFTContainer" id="WalletContainer"></div>
     </div>
-    <button class="smallbutton wallet center" onclick="ShowCollection()">Show More</button>
-  </div>
 
+    <div id="collection" class="display">
+        <a onclick="SwitchPage('mint')" class="DisplayHeader return">Return</a>
+        <br>
+        <a class="DisplayHeader">Entire AGN Collection</a>
+        <br>
+        <br>
+        <div class="NFTContainer" id="CollectionContainer">
+
+        </div>
+        <button class="smallbutton wallet center" onclick="ShowCollection()">Show More</button>
+    </div>
 </body>
 <script src="src/Functionality.js"></script>
 <script src="src/abi.js"></script>
 <script src="src/Web3.js"></script>
+
 </html>
